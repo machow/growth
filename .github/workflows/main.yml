@@ -1,0 +1,31 @@
+name: main
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, 'BOT:')"
+    steps:
+    - uses: actions/checkout
+      #with:
+        #persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        #fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    - name: Create local changes
+      run: |
+        python scripts/generate_readme.py > README.md
+    - name: Commit files
+      run: |
+        git config --local user.email "mc_al_github@fastmail.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "BOT: Generate README" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
