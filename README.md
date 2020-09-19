@@ -1,5 +1,3 @@
-README # growth
-
 ## Posts
 
 <!-- TOC -->
