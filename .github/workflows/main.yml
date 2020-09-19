@@ -19,6 +19,7 @@ jobs:
     - name: Create local changes
       run: |
         python scripts/generate_readme.py > README.md
+        cat README.md
     - name: Commit files
       run: |
         git config --local user.email "mc_al_github@fastmail.com"
