@@ -20,13 +20,13 @@ jobs:
       run: |
         python scripts/generate_readme.py > README.md
         cat README.md
-    - name: Commit files
-      run: |
-        git config --local user.email "mc_al_github@fastmail.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "BOT: Generate README" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        #- name: Commit files
+        #  run: |
+        #    git config --local user.email "mc_al_github@fastmail.com"
+        #    git config --local user.name "GitHub Action"
+        #    git commit -m "BOT: Generate README" -a
+        #- name: Push changes
+        #  uses: ad-m/github-push-action@master
+        #  with:
+        #    github_token: ${{ secrets.GITHUB_TOKEN }}
 
