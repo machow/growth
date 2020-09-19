@@ -33,4 +33,4 @@ for post in p.glob("*.md"):
 
 html = ul(*[li(a(*entry)) for entry in entries])
 
-print(replace_toc(readme.read_text(), html))
+print(replace_toc(readme.read_text(), html), end = "")
