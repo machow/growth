@@ -1,18 +1,6 @@
-README # growth
-
-## Things I might use in the future
-
-* https://github.com/verlok/lazyload
-
-<!-- TOC -->
-
-<!-- ENDTOC -->
-
 # growth
 
-## Things I might use in the future
-
-* https://github.com/verlok/lazyload
+## Posts
 
 <!-- TOC -->
 <ul>
@@ -22,3 +10,6 @@ README # growth
 </ul>
 <!-- ENDTOC -->
 
+## Things I might use in the future
+
+* https://github.com/verlok/lazyload
