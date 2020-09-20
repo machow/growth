@@ -1,5 +1,6 @@
 from pathlib import Path
 from string import Template
+from mistune import markdown
 
 class CustomTemplate(Template):
     delimiter = '{{'
@@ -16,6 +17,6 @@ template = CustomTemplate(
     Path("_template.html").read_text()
     )
 
-content = "\n".join([p.read_text() for p in Path("posts").glob("*.md")])
+content = "\n".join([markdown(p.read_text()) for p in Path("posts").glob("*.md")])
 
 print(template.substitute(content = content), end = "")
