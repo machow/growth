@@ -4,17 +4,21 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+
+    .container {
+       display: flex;
+       overflow-x: auto
+    }
+
     .main {
+      flex: 1 0;
+      left: 0;
       margin: auto;
       max-width: 600px;
-
     }
     .toc {
-      position: absolute;
-      z-index: 1;
-      top: 16px;
-      right: 16px;
-      width: 280px;
+      position: sticky;
+      flex: 0 0;
       padding: 32px;
     }
 
@@ -33,9 +37,8 @@
   <body>
 
 
-    <div class="main">
-    
-    <h1 id="increase-the-size-of-your-ask">increase the size of your ask</h1>
+    <div class="container">
+      <div class="main"><h1 id="increase-the-size-of-your-ask">increase the size of your ask</h1>
 <p>When someone asks how they can help telling them to wait is a bad idea.
 You might want to write something up, or get things ready.
 But if you're like me it won't happen.</p>
@@ -49,11 +52,9 @@ The most common focus has been this: remembering what I'm reading today a month 
 I want to remember the things from today for today.
 But the bulk of that will be garbage.
 So I take quick daily notes.
-Once I get to a certain level of understanding, I write newer more permenant notes (ad infinitum).</p>
-    
+Once I get to a certain level of understanding, I write newer more permenant notes (ad infinitum).</p></div>
+      <nav class="toc"></nav>
     </div>
-    
-    <nav class="toc"></nav>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>

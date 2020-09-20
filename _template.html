@@ -4,17 +4,21 @@
     body {
       font-family: 'Roboto', sans-serif;
     }
+
+    .container {
+       display: flex;
+       overflow-x: auto
+    }
+
     .main {
+      flex: 1 0;
+      left: 0;
       margin: auto;
       max-width: 600px;
-
     }
     .toc {
-      position: absolute;
-      z-index: 1;
-      top: 16px;
-      right: 16px;
-      width: 280px;
+      position: sticky;
+      flex: 0 0;
       padding: 32px;
     }
 
@@ -33,13 +37,10 @@
   <body>
 
 
-    <div class="main">
-    
-    {{content}}
-    
+    <div class="container">
+      <div class="main">{{content}}</div>
+      <nav class="toc"></nav>
     </div>
-    
-    <nav class="toc"></nav>
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
