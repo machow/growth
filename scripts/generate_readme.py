@@ -24,7 +24,7 @@ p = Path("posts")
 readme = Path("README.md")
 
 entries = []
-for post in p.glob("*.md"):
+for post in sorted(p.glob("*.md")):
     m = re.match("# (.*)", post.read_text())
     if m is None:
         raise ValueError("Cannot match title for post: %s" %post)
