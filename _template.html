@@ -1,41 +1,63 @@
-<style>
-.main {
-  margin: auto;
-  max-width: 600px;
-}
-.toc {
-  position: absolute;
-  z-index: 1;
-  top: 16px;
-  right: 16px;
-  width: 280px;
-  padding: 32px;
-}
-</style>
+<html>
+  <head>
+    <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .main {
+      margin: auto;
+      max-width: 600px;
 
-<div class="main">
+    }
+    .toc {
+      position: absolute;
+      z-index: 1;
+      top: 16px;
+      right: 16px;
+      width: 280px;
+      padding: 32px;
+    }
 
-{{content}}
+    h1, h2, h3 {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    </style>
 
-</div>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+  </head>
+  <body>
 
-<nav class="toc"></nav>
+
+    <div class="main">
+    
+    {{content}}
+    
+    </div>
+    
+    <nav class="toc"></nav>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: '.main',
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: 'h1, h2, h3',
+        // For headings inside relative or absolute positioned containers within content.
+        hasInnerContainers: true,
+      });
+    });
+    </script>
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+  </body>
+</html>
+  
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  tocbot.init({
-    // Where to render the table of contents.
-    tocSelector: '.toc',
-    // Where to grab the headings to build the table of contents.
-    contentSelector: '.main',
-    // Which headings to grab inside of the contentSelector element.
-    headingSelector: 'h1, h2, h3',
-    // For headings inside relative or absolute positioned containers within content.
-    hasInnerContainers: true,
-  });
-});
-</script>
+
