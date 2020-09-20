@@ -34,7 +34,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: build webpage
       run: |
-        cat posts/*.md > index.md
+        python generate_webpage.py > index.md
     - name: gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
