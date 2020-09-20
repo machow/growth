@@ -18,4 +18,4 @@ template = CustomTemplate(
 
 content = "\n".join([p.read_text() for p in Path("posts").glob("*.md")])
 
-print(template.format(content = content), end = "")
+print(template.substitute(content = content), end = "")
