@@ -19,6 +19,7 @@ template = CustomTemplate(
     Path("_template.html").read_text()
     )
 
-content = "\n".join([md.convert(p.read_text()) for p in Path("posts").glob("*.md")])
+posts = sorted(Path("posts").glob("*.md"))
+content = "\n".join([md.convert(p.read_text()) for p in posts])
 
 print(template.substitute(content = content), end = "")
