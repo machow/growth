@@ -2,10 +2,12 @@
 .main {
   margin-left: 0px;
   margin-right: 0px;
+  max-width: 600px;
 }
 .toc {
   position: absolute;
   z-index: 1;
+  top: 16px;
   right: 16px;
   width: 280px;
   padding: 32px;
@@ -45,9 +47,9 @@ Once I get to a certain level of understanding, I write newer more permenant not
 document.addEventListener('DOMContentLoaded', function () {
   tocbot.init({
     // Where to render the table of contents.
-    tocSelector: '.js-toc',
+    tocSelector: '.toc',
     // Where to grab the headings to build the table of contents.
-    contentSelector: 'body',
+    contentSelector: '.main',
     // Which headings to grab inside of the contentSelector element.
     headingSelector: 'h1, h2, h3',
     // For headings inside relative or absolute positioned containers within content.
