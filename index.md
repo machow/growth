@@ -1,3 +1,19 @@
+<style>
+.main {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.toc {
+  position: absolute;
+  z-index: 1;
+  right: 16px;
+  width: 280px;
+  padding: 32px;
+}
+</style>
+
+<content class="main">
+
 # increase the size of your ask
 
 When someone asks how they can help telling them to wait is a bad idea.
@@ -5,9 +21,11 @@ You might want to write something up, or get things ready.
 But if you're like me it won't happen.
 
 Maybe someone who wants to help can help with these bigger asks: the write-ups and the getting readies.
+
 # learning cantonese in chinese bakeries
 
 I feel like the cure for flashcard dread, when studying cantonese, is going to a Chinese bakery.
+
 
 # daily notes are garbage. beautiful garbage.
 
@@ -20,3 +38,27 @@ But the bulk of that will be garbage.
 So I take quick daily notes.
 Once I get to a certain level of understanding, I write newer more permenant notes (ad infinitum).
 
+
+
+</content>
+
+<nav class="toc"></nav>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  tocbot.init({
+    // Where to render the table of contents.
+    tocSelector: '.js-toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: 'body',
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: 'h1, h2, h3',
+    // For headings inside relative or absolute positioned containers within content.
+    hasInnerContainers: true,
+  });
+});
+</script>
