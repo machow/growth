@@ -13,4 +13,4 @@ If your goal is to write, then you have 3 options:
 The downside of a constrained CMS is that you won't be able to write absolutely everything you could dream of.
 That sounds like the kind of problem you should start thinking about _after_ you've been writing for a while, not before.
 
-![CMS trade-offs](posts/46-cms-trade-offs.png)
+![CMS trade-offs](posts/46-cms-trade-off.png)
