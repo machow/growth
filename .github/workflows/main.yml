@@ -32,6 +32,9 @@ jobs:
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: build webpage
+      run: |
+        cat posts/*.md > index.md
     - name: gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with:
