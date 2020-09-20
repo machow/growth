@@ -7,19 +7,20 @@
 
     .container {
        display: flex;
-       overflow-x: auto
+       flex-direction: column;
+       flex-wrap: wrap;
+       overflow-x: auto;
+       max-width: 900px;
     }
 
     .main {
-      flex: 1 0;
-      left: 0;
-      margin: auto;
-      max-width: 600px;
+      max-width: 580px;
     }
     .toc {
       position: sticky;
-      flex: 0 0;
-      padding: 32px;
+      top: 0px;
+      padding: 20px;
+      width: 260px;
     }
 
     *[tabindex]:focus {
